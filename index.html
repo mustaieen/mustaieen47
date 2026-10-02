@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Mariya Janu 🤍</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:"Segoe UI", sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe4ec,
+            #fff5f8,
+            #eadcff
+        );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow-x:hidden;
+
+    color:#5b4050;
+}
+
+
+/* Floating hearts */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:22px;
+
+    animation:
+        float 7s linear infinite;
+
+    opacity:.7;
+    pointer-events:none;
+}
+
+@keyframes float{
+
+    0%{
+        transform:
+            translateY(0)
+            scale(.😎
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:
+            translateY(-110vh)
+            scale(1.4)
+            rotate(25deg);
+
+        opacity:0;
+    }
+}
+
+
+/* Main container */
+
+.container{
+
+    width:92%;
+    max-width:900px;
+
+    margin:40px auto;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:
+        blur(15px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    border-radius:35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(130,70,110,.18);
+}
+
+
+/* Title */
+
+.small{
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+    color:#a56b86;
+
+    text-transform:uppercase;
+}
+
+
+h1{
+
+    margin-top:10px;
+
+    font-size:55px;
+
+    color:#c45c85;
+
+    font-family:Georgia,serif;
+}
+
+
+.subtitle{
+
+    margin:
+        8px 0 25px;
+
+    font-size:18px;
+
+    color:#765765;
+}
+
+
+/* Photos */
+
+.photos{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+}
+
+
+.photo{
+
+    width:260px;
+
+    height:330px;
+
+    padding:8px;
+
+    background:white;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(100,60,90,.18);
+
+    transform:
+        rotate(-2deg);
+
+    transition:.4s;
+}
+
+
+.photo:nth-child(2){
+
+    transform:
+        rotate(2deg);
+}
+
+
+.photo:hover{
+
+    transform:
+        rotate(0deg)
+        scale(1.04);
+}
+
+
+.photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:16px;
+}
+
+
+/* Message */
+
+.message{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    padding:30px 27px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #f9f0ff
+        );
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(200,120,170,.08);
+}
+
+
+.message h2{
+
+    color:#c45c85;
+
+    margin-bottom:20px;
+
+    font-family:Georgia,serif;
+
+    font-size:30px;
+}
+
+
+.message p{
+
+    line-height:2;
+
+    font-size:17px;
+
+    color:#654b59;
+}
+
+
+.quote{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.65);
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    color:#a14d70;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+
+/* Button */
+
+button{
+
+    border:none;
+
+    padding:
+        14px 28px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e879a3,
+            #b978d8
+        );
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(190,90,140,.25);
+
+    transition:.3s;
+}
+
+
+button:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.04);
+}
+
+
+/* Secret message */
+
+#secret{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    color:#a14d70;
+
+    line-height:2;
+
+    font-size:16px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(130,80,120,.10);
+
+    animation:
+        appear .7s ease;
+}
+
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* Hidden Song */
+
+#loveSong{
+
+    display:none;
+}
+
+
+/* Footer */
+
+.footer{
+
+    margin-top:25px;
+
+    font-size:13px;
+
+    color:#a98296;
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .container{
+
+        width:94%;
+
+        margin:20px auto;
+
+        padding:
+            30px 17px;
+
+        border-radius:28px;
+    }
+
+
+    h1{
+
+        font-size:43px;
+    }
+
+
+    .subtitle{
+
+        font-size:15px;
+    }
+
+
+    .photo{
+
+        width:230px;
+
+        height:300px;
+    }
+
+
+    .message{
+
+        padding:
+            27px 20px;
+    }
+
+
+    .message h2{
+
+        font-size:27px;
+    }
+
+
+    .message p{
+
+        font-size:15px;
+
+        line-height:1.9;
+    }
+
+
+    .quote{
+
+        font-size:16px;
+
+        padding:17px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- Floating Hearts -->
+
+<div class="heart"
+     style="left:8%;animation-delay:0s;">
+     🤍
+</div>
+
+<div class="heart"
+     style="left:22%;animation-delay:2s;">
+     💗
+</div>
+
+<div class="heart"
+     style="left:40%;animation-delay:4s;">
+     💖
+</div>
+
+<div class="heart"
+     style="left:60%;animation-delay:1s;">
+     🤍
+</div>
+
+<div class="heart"
+     style="left:78%;animation-delay:3s;">
+     💕
+</div>
+
+<div class="heart"
+     style="left:92%;animation-delay:5s;">
+     💗
+</div>
+
+
+<div class="container">
+
+
+    <div class="small">
+        A Little Gift For Someone Special
+    </div>
+
+
+    <h1>
+        My Mariya Janu 🤍
+    </h1>
+
+
+    <div class="subtitle">
+
+        Some people are simply precious...
+        and you're one of them. 🌸
+
+    </div>
+
+
+    <!-- =================================
+         📸 1 NUMBER IMAGE
+         ================================= -->
+
+    <div class="photos">
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/Q7zNGqrT/mustaieen.jpg"
+                alt="Mariya Photo 1"
+            >
+
+        </div>
+
+
+        <!-- =================================
+             📸 2 NUMBER IMAGE
+             ================================= -->
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/Z1hWX6tv/mama.jpg"
+                alt="Mariya Photo 2"
+            >
+
+        </div>
+
+
+    </div>
+
+
+    <div class="message">
+
+
+        <h2>
+            For You, Mariya 🌷
+        </h2>
+
+
+        <p>
+
+            তোমাকে দেওয়ার মতো হয়তো অনেক দামি কিছু
+            আমার কাছে নেই,
+            কিন্তু তোমার জন্য কিছু সুন্দর কথা
+            আর কিছু সুন্দর স্মৃতি
+            সবসময় আমার কাছে থাকবে। 🤍
+
+        </p>
+
+
+        <p style="margin-top:15px;">
+
+            তুমি আমার কাছে সত্যিই অনেক বিশেষ
+            একজন মানুষ।
+            তোমার হাসিটা যেন সবসময় এমনই সুন্দর থাকে—
+            এটাই আমার ছোট্ট একটা চাওয়া। 🌸
+
+        </p>
+
+
+        <p style="margin-top:15px;">
+
+            তোমার সাথে কাটানো ছোট ছোট মুহূর্তগুলো
+            হয়তো সময়ের কাছে খুব সাধারণ,
+            কিন্তু স্মৃতির কাছে সেগুলো
+            অনেক বেশি সুন্দর। 🌷✨
+
+        </p>
+
+
+        <p style="margin-top:15px;">
+
+            হয়তো সব কথা মুখে বলা যায় না,
+            সব অনুভূতিকে শব্দে প্রকাশ করা যায় না।
+            কিছু অনুভূতি শুধু তোমার জন্য আমার মন এর মধ্যে
+            খুব যত্ন করে রেখে দিয়েছি...। 🤍
+
+        </p>
+
+
+        <div class="quote">
+
+            “Some people become a beautiful part
+            of our memories without even trying.”
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================
+         🎵 HIDDEN SONG
+         Vocaroo link supplied by you
+         ================================= -->
+
+    <audio
+        id="loveSong"
+        autoplay
+        loop
+        preload="auto"
+    >
+
+        <source
+            src="https://voca.ro/12vuCasds5kI"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+    <button onclick="showMessage()">
+
+        💌 Open Your Little Surprise
+
+    </button>
+
+
+    <div id="secret">
+
+
+        Mariya, তুমি সত্যিই খুব special
+        একজন মানুষ আমার জীবনে। 🥹🤍
+
+        <br><br>
+
+        তুমি পাশে থাকলে আমার পুরো পৃথিবীটাই
+        যেন অন্যরকম সুন্দর আর আলোয় ভরে ওঠে।
+
+        <br><br>
+
+        তোমার ওই ছোট্ট একটা হাসি
+        আমার সমস্ত ক্লান্তি নিমেষেই
+        দূর করে দিতে পারে। 🌷✨
+
+        <br><br>
+
+        আমি হয়তো মুখে সবসময়
+        গুছিয়ে বলতে পারি না,
+        কিন্তু তুমি সত্যিই আমার কাছে
+        অনেক অনেক বেশি বিশেষ।
+
+        <br><br>
+
+        তোমার জন্য আমার মনে
+        যে ভালোবাসা, যত্ন আর শুভকামনা আছে,
+        সেগুলো হয়তো কয়েকটা শব্দে
+        কখনোই পুরোপুরি প্রকাশ করা সম্ভব নয়। 🤍
+
+        <br><br>
+
+        শুধু চাই,
+        তুমি সবসময় ভালো থাকো,
+        হাসিখুশি থাকো,
+        আর তোমার মুখের সেই সুন্দর হাসিটা
+        কখনো হারিয়ে না যায়। 🌸
+
+        <br><br>
+
+        তোমার জীবনের প্রতিটা দিন
+        সুন্দর হোক,
+        প্রতিটা স্বপ্ন পূরণ হোক,
+        আর প্রতিটা মুহূর্ত
+        সুন্দর স্মৃতিতে ভরে উঠুক। ✨
+
+        <br><br>
+
+        <b>
+            { I Love you My Mariya Janu } 🤍
+        </b>
+
+
+    </div>
+
+
+    <div class="footer">
+
+        Made with a little bit of love
+        & lots of good wishes 🤍
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+/* =================================
+   🎵 AUTO PLAY SONG
+   ================================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        const song =
+            document.getElementById(
+                "loveSong"
+            );
+
+
+        song.volume = 0.7;
+
+
+        song.play().catch(
+            function(){
+
+                /*
+                Browser autoplay with sound
+                block করলে নিচের click fallback
+                কাজ করার চেষ্টা করবে।
+                */
+
+            }
+        );
+
+    }
+);
+
+
+/* =================================
+   🎵 AUTOPLAY FALLBACK
+   ================================= */
+
+document.addEventListener(
+    "click",
+    function(){
+
+        const song =
+            document.getElementById(
+                "loveSong"
+            );
+
+
+        if(song.paused){
+
+            song.play().catch(
+                function(){}
+            );
+
+        }
+
+    },
+
+    {
+        once:true
+    }
+);
+
+
+/* =================================
+   💌 SURPRISE MESSAGE
+   ================================= */
+
+function showMessage(){
+
+
+    const secret =
+        document.getElementById(
+            "secret"
+        );
+
+
+    if(
+        secret.style.display ===
+        "block"
+    ){
+
+        secret.style.display =
+            "none";
+
+    }
+
+    else{
+
+        secret.style.display =
+            "block";
+
+
+        for(
+            let i = 0;
+            i < 15;
+            i++
+        ){
+
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+
+            heart.innerHTML =
+                [
+                    "🤍",
+                    "💗",
+                    "💖",
+                    "💕",
+                    "🌸"
+                ][
+                    Math.floor(
+                        Math.random()*5
+                    )
+                ];
+
+
+            heart.style.position =
+                "fixed";
+
+
+            heart.style.left =
+                "50%";
+
+
+            heart.style.top =
+                "50%";
+
+
+            heart.style.fontSize =
+                "24px";
+
+
+            heart.style.pointerEvents =
+                "none";
+
+
+            heart.style.zIndex =
+                "9999";
+
+
+            const x =
+                (Math.random()-0.5)
+                * 500;
+
+
+            const y =
+                (Math.random()-0.5)
+                * 400;
+
+
+            heart.animate(
+
+                [
+
+                    {
+                        transform:
+                            "translate(-50%,-50%) scale(.5)",
+
+                        opacity:1
+                    },
+
+                    {
+
+                        transform:
+                            `translate(
+                                calc(-50% + ${x}px),
+                                calc(-50% + ${y}px)
+                            )
+                            scale(1.5)`,
+
+                        opacity:0
+
+                    }
+
+                ],
+
+                {
+
+                    duration:1200,
+
+                    easing:"ease-out"
+
+                }
+
+            );
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                function(){
+
+                    heart.remove();
+
+                },
+                1200
+            );
+
+        }
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
+i.ibb.co.com
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>My Mariya Janu 🤍</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff5f8, #eadcff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: #5b4050;
+    touch-action: manipulation;
+}
+
+/* =================================
+   🏹 BOW & ARROW INTRO OVERLAY
+   ================================= */
+#introOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #fff0f5 0%, #ffd6e5 100%);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro-title {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    color: #c45c85;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    text-shadow: 0 2px 5px rgba(196, 92, 133, 0.2);
+}
+
+/* Interactive Bow Container */
+.bow-game-area {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Target Heart */
+.target-heart {
+    font-size: 75px;
+    animation: heartPulse 1.5s infinite ease-in-out;
+    filter: drop-shadow(0 8px 20px rgba(225, 80, 140, 0.4));
+    transition: transform 0.2s ease;
+}
+
+@keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+/* Bow & String Wrapper */
+.bow-wrapper {
+    position: relative;
+    width: 220px;
+    height: 120px;
+}
+
+.bow-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Straight Upright Arrow Handle */
+.draggable-arrow {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    font-size: 42px;
+    cursor: grab;
+    z-index: 10;
+    transition: transform 0.1s linear;
+}
+
+.draggable-arrow:active {
+    cursor: grabbing;
+}
+
+/* Petals Falling */
+.petal {
+    position: fixed;
+    top: -20px;
+    font-size: 26px;
+    pointer-events: none;
+    z-index: 999999;
+    animation: petalFall linear forwards;
+}
+
+@keyframes petalFall {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg) scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* Floating hearts on main page */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: float 7s linear infinite;
+    opacity: .7;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(.😎 rotate(0deg); opacity: 0; }
+    20% { opacity: .8; }
+    100% { transform: translateY(-110vh) scale(1.4) rotate(25deg); opacity: 0; }
+}
+
+/* Main container */
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, .72);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, .8);
+    border-radius: 35px;
+    box-shadow: 0 20px 60px rgba(130, 70, 110, .18);
+}
+
+.small {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #a56b86;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 55px;
+    color: #c45c85;
+    font-family: Georgia, serif;
+}
+
+.subtitle {
+    margin: 8px 0 25px;
+    font-size: 18px;
+    color: #765765;
+}
+
+/* Photos */
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.photo {
+    width: 260px;
+    height: 330px;
+    padding: 8px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(100, 60, 90, .18);
+    transform: rotate(-2deg);
+    transition: .4s;
+}
+
+.photo:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.photo:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Message */
+.message {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px 27px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #fff7fa, #f9f0ff);
+    box-shadow: inset 0 0 20px rgba(200, 120, 170, .08);
+}
+
+.message h2 {
+    color: #c45c85;
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.message p {
+    line-height: 2;
+    font-size: 17px;
+    color: #654b59;
+}
+
+.quote {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .65);
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #a14d70;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #e879a3, #b978d8);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(190, 90, 140, .25);
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+}
+
+/* Secret message */
+#secret {
+    display: none;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff;
+    color: #a14d70;
+    line-height: 2;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(130, 80, 120, .10);
+    animation: appear .7s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#loveSong { display: none; }
+
+.footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #a98296;
+}
+
+@media(max-width:600px) {
+    .container { width: 94%; margin: 20px auto; padding: 30px 17px; border-radius: 28px; }
+    h1 { font-size: 43px; }
+    .subtitle { font-size: 15px; }
+    .photo { width: 230px; height: 300px; }
+    .message { padding: 27px 20px; }
+    .message h2 { font-size: 27px; }
+    .message p { font-size: 15px; line-height: 1.9; }
+    .quote { font-size: 16px; padding: 17px; }
+    .intro-title { font-size: 22px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🏹 DRAGGABLE BOW INTRO OVERLAY -->
+<div id="introOverlay">
+    <div class="intro-title">
+        Shoot Cupid's Arrow to My Mariya Janu 🤍
+    </div>
+
+    <div class="bow-game-area">
+        <div class="target-heart" id="targetHeart">💖</div>
+
+        <div class="bow-wrapper">
+            <svg class="bow-svg" viewBox="0 0 200 100">
+                <!-- Bow Wood -->
+                <path d="M 20 80 Q 100 10 180 80" fill="none" stroke="#c45c85" stroke-width="6" stroke-linecap="round"/>
+                <!-- Dynamic Bow String -->
+                <path id="bowString" d="M 20 80 Q 100 80 180 80" fill="none" stroke="#f2a8c4" stroke-width="3"/>
+            </svg>
+
+            <div class="draggable-arrow" id="arrowObj">🏹</div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Hearts -->
+<div class="heart" style="left:8%;animation-delay:0s;">🤍</div>
+<div class="heart" style="left:22%;animation-delay:2s;">💗</div>
+<div class="heart" style="left:40%;animation-delay:4s;">💖</div>
+<div class="heart" style="left:60%;animation-delay:1s;">🤍</div>
+<div class="heart" style="left:78%;animation-delay:3s;">💕</div>
+<div class="heart" style="left:92%;animation-delay:5s;">💗</div>
+
+<div class="container">
+
+    <div class="small">
+        A Little Gift For Someone Special
+    </div>
+
+    <h1>
+        My Mariya Janu 🤍
+    </h1>
+
+    <div class="subtitle">
+        Some people are simply precious...
+        and you're one of them. 🌸
+    </div>
+
+    <!-- 📸 PHOTOS -->
+    <div class="photos">
+        <div class="photo">
+            <img src="https://i.ibb.co.com/Q7zNGqrT/mustaieen.jpg" alt="Mariya Photo 1">
+        </div>
+        <div class="photo">
+            <img src="https://i.ibb.co.com/Z1hWX6tv/mama.jpg" alt="Mariya Photo 2">
+        </div>
+    </div>
+
+    <!-- 💌 MESSAGE -->
+    <div class="message">
+        <h2>For You, Mariya 🌷</h2>
+
+        <p>
+            তোমাকে দেওয়ার মতো হয়তো অনেক দামি কিছু আমার কাছে নেই,
+            কিন্তু তোমার জন্য কিছু সুন্দর কথা আর কিছু সুন্দর স্মৃতি সবসময় আমার কাছে থাকবে। 🤍
+        </p>
+
+        <p style="margin-top:15px;">
+            তুমি আমার কাছে সত্যিই অনেক বিশেষ একজন মানুষ।
+            তোমার হাসিটা যেন সবসময় এমনই সুন্দর থাকে— এটাই আমার ছোট্ট একটা চাওয়া। 🌸
+        </p>
+
+        <p style="margin-top:15px;">
+            তোমার সাথে কাটানো ছোট ছোট মুহূর্তগুলো হয়তো সময়ের কাছে খুব সাধারণ,
+            কিন্তু স্মৃতির কাছে সেগুলো অনেক বেশি সুন্দর। 🌷✨
+        </p>
+
+        <p style="margin-top:15px;">
+            হয়তো সব কথা মুখে বলা যায় না, সব অনুভূতিকে শব্দে প্রকাশ করা যায় না।
+            কিছু অনুভূতি শুধু তোমার জন্য আমার মন এর মধ্যে খুব যত্ন করে রেখে দিয়েছি...। 🤍
+        </p>
+
+        <div class="quote">
+            “Some people become a beautiful part of our memories without even trying.”
+        </div>
+    </div>
+
+    <!-- 🎵 HIDDEN SONG -->
+    <audio id="loveSong" loop preload="auto">
+        <source src="https://www.image2url.com/r2/default/audio/1790874951193-287f65d1-ad19-492e-ba86-eece0ef2cc2c.m4a" type="audio/mp4">
+    </audio>
+
+    <button onclick="showMessage()">
+        💌 Open Your Little Surprise
+    </button>
+
+    <div id="secret">
+        Mariya, তুমি সত্যিই খুব special একজন মানুষ আমার জীবনে। 🥹🤍
+        <br><br>
+        তুমি পাশে থাকলে আমার পুরো পৃথিবীটাই যেন অন্যরকম সুন্দর আর আলোয় ভরে ওঠে।
+        <br><br>
+        তোমার ওই ছোট্ট একটা হাসি আমার সমস্ত ক্লান্তি নিমেষেই দূর করে দিতে পারে। 🌷✨
+        <br><br>
+        আমি হয়তো মুখে সবসময় গুছিয়ে বলতে পারি না, কিন্তু তুমি সত্যিই আমার কাছে অনেক অনেক বেশি বিশেষ।
+        <br><br>
+        তোমার জন্য আমার মনে যে ভালোবাসা, যত্ন আর শুভকামনা আছে, সেগুলো হয়তো কয়েকটা শব্দে কখনোই পুরোপুরি প্রকাশ করা সম্ভব নয়। 🤍
+        <br><br>
+        শুধু চাই, তুমি সবসময় ভালো থাকো, হাসিখুশি থাকো, আর তোমার মুখের সেই সুন্দর হাসিটা কখনো হারিয়ে না যায়। 🌸
+        <br><br>
+        তোমার জীবনের প্রতিটা দিন সুন্দর হোক, প্রতিটা স্বপ্ন পূরণ হোক, আর প্রতিটা মুহূর্ত সুন্দর স্মৃতিতে ভরে উঠুক। ✨
+        <br><br>
+        <b>{ I Love you My Mariya Janu } 🤍</b>
+    </div>
+
+    <div class="footer">
+        Made with a little bit of love & lots of good wishes 🤍
+    </div>
+
+</div>
+
+<script>
+const arrow = document.getElementById("arrowObj");
+const bowString = document.getElementById("bowString");
+const target = document.getElementById("targetHeart");
+const song = document.getElementById("loveSong");
+const overlay = document.getElementById("introOverlay");
+
+let isDragging = false;
+let startY = 0;
+let pullDistance = 0;
+let isShot = false;
+
+// Audio Auto-play helper on any screen click or touch
+function playAudio() {
+    if (song && song.paused) {
+        song.volume = 0.8;
+        song.play().then(() => {
+            document.removeEventListener("touchstart", playAudio);
+            document.removeEventListener("click", playAudio);
+        }).catch(err => console.log("Autoplay waiting for user interaction...", err));
+    }
+}
+
+document.addEventListener("touchstart", playAudio, { once: true });
+document.addEventListener("click", playAudio, { once: true });
+
+// Touch & Mouse Drag Events
+arrow.addEventListener("mousedown", startPull);
+arrow.addEventListener("touchstart", startPull, {passive: false});
+
+window.addEventListener("mousemove", duringPull);
+window.addEventListener("touchmove", duringPull, {passive: false});
+
+window.addEventListener("mouseup", releaseArrow);
+window.addEventListener("touchend", releaseArrow);
+
+function startPull(e) {
+    if (isShot) return;
+    isDragging = true;
+    startY = e.touches ? e.touches[0].clientY : e.clientY;
+    
+    // Play music right away on pulling
+    playAudio();
+}
+
+function duringPull(e) {
+    if (!isDragging || isShot) return;
+    if (e.cancelable) e.preventDefault();
+
+    const currentY = e.touches ? e.touches[0].clientY : e.clientY;
+    const diff = currentY - startY;
+
+    // Pulling downwards
+    if (diff > 0) {
+        pullDistance = Math.min(diff, 80);
+        arrow.style.transform = translateX(-50%) translateY(${pullDistance}px) rotate(-45deg);
+        // Curve bow string downwards
+        bowString.setAttribute("d", M 20 80 Q 100 ${80 + pullDistance} 180 80);
+    }
+}
+
+function releaseArrow() {
+    if (!isDragging || isShot) return;
+    isDragging = false;
+
+    if (pullDistance > 15) {
+        isShot = true;
+        
+        // Ensure song is playing when arrow releases
+        playAudio();
+
+        // Snap string back
+        bowString.setAttribute("d", "M 20 80 Q 100 80 180 80");
+        
+        // Animate Arrow Flying Straight Up to Target
+        arrow.style.transition = "transform 0.35s cubic-bezier(0.1, 0.9, 0.2, 1)";
+        arrow.style.transform = "translateX(-50%) translateY(-230px) rotate(-45deg) scale(1.2)";
+
+        setTimeout(() => {
+            // Heart Gentle Pulse
+            target.style.transform = "scale(1.4)";
+
+            // Flower Shower
+            createPetalShower();
+
+            // Reveal Main Page
+            setTimeout(() => {
+                overlay.style.opacity = "0";
+                setTimeout(() => {
+                    overlay.style.visibility = "hidden";
+                }, 1000);
+            }, 600);
+
+        }, 300);
+
+    } else {
+        // Reset back
+        arrow.style.transform = "translateX(-50%) translateY(0px) rotate(-45deg)";
+        bowString.setAttribute("d", "M 20 80 Q 100 80 180 80");
+    }
+}
+
+/* 🌸 FLOWER PETAL EXPLOSION */
+function createPetalShower() {
+    const petals = ["🌸", "🌹", "🌷", "🌺", "✨", "🤍", "💖"];
+    for (let i = 0; i < 55; i++) {
+        setTimeout(() => {
+            const petal = document.createElement("div");
+            petal.className = "petal";
+            petal.innerHTML = petals[Math.floor(Math.random() * petals.length)];
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.animationDuration = (Math.random() * 2 + 2) + "s";
+            petal.style.fontSize = (Math.random() * 16 + 18) + "px";
+
+            document.body.appendChild(petal);
+
+            setTimeout(() => {
+                petal.remove();
+            }, 4000);
+        }, i * 45);
+    }
+}
+
+/* 💌 SECRET MESSAGE TOGGLE */
+function showMessage() {
+    const secret = document.getElementById("secret");
+
+    if (secret.style.display === "block") {
+        secret.style.display = "none";
+    } else {
+        secret.style.display = "block";
+
+        for (let i = 0; i < 15; i++) {
+            const heart = document.createElement("div");
+            heart.innerHTML = ["🤍", "💗", "💖", "💕", "🌸"][Math.floor(Math.random() * 5)];
+            heart.style.position = "fixed";
+            heart.style.left = "50%";
+            heart.style.top = "50%";
+            heart.style.fontSize = "24px";
+            heart.style.pointerEvents = "none";
+            heart.style.zIndex = "9999";
+
+            const x = (Math.random() - 0.5) * 500;
+            const y = (Math.random() - 0.5) * 400;
+
+            heart.animate([
+                { transform: "translate(-50%,-50%) scale(.5)", opacity: 1 },
+                { transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(1.5), opacity: 0 }
+            ], {
+                duration: 1200,
+                easing: "ease-out"
+            });
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 1200);
+        }
+    }
+}
+</script>
+
+</body>
+</html>
